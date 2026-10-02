@@ -1,0 +1,37 @@
+.color-picker-control {
+    position: relative;
+}
+
+.color-picker-trigger {
+    border: 0;
+    background: transparent;
+    line-height: 1;
+}
+
+.color-picker {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: repeat(5, 28px);
+    gap: 6px;
+    padding: 8px;
+    background: white;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(60 64 67 / 30%);
+    max-width: calc(100vw - 24px);
+}
+
+.color-swatch {
+    width: 26px;
+    height: 26px;
+    border: 1px solid rgb(60 64 67 / 25%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color-swatch:hover {
+    border-color: #202124;
+}

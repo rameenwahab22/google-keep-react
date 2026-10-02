@@ -1,0 +1,118 @@
+.notes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 50px 40px;
+    gap: 8px;
+}
+
+.note {
+    background: #ffffff;
+    width: 240px;
+    max-width: 100%;
+    margin: 10px;
+    border: 1px solid #e0e1e0;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.note:hover {
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+}
+
+.note .title {
+    padding: 15px 40px 0 15px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.note .text {
+    padding: 10px 15px 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.note .note-footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    padding: 0 4px 4px;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.note-footer .material-icons-outlined {
+    color: #5f6368;
+}
+
+.note .check-circle {
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    visibility: hidden;
+}
+
+.note .pin-icon {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.note .pin-icon .material-icons,
+.note .pin-icon .material-icons-outlined {
+    padding: 5px;
+    font-size: 18px;
+    color: #5f6368;
+}
+
+.note .pin-icon .material-icons {
+    color: #202124;
+}
+
+.note-reminder {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 10px 15px 0;
+    padding-bottom: 5px;
+    font-size: 0.75rem;
+    color: #5f6368;
+    overflow-wrap: anywhere;
+}
+
+.note-reminder .reminder-icon {
+    font-size: 16px;
+    padding: 0;
+}
+
+@media (max-width: 1024px) {
+    .notes {
+        padding: 0 24px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .notes {
+        padding: 0 12px 40px;
+        gap: 0;
+    }
+
+    .note {
+        width: calc(50% - 16px);
+        min-width: 160px;
+        margin: 8px;
+    }
+
+    .note .note-footer,
+    .note .pin-icon {
+        visibility: visible;
+    }
+}
+
+@media (max-width: 560px) {
+    .note {
+        width: 100%;
+        margin: 8px 0;
+    }
+}
